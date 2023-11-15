@@ -1,15 +1,12 @@
-import { useState } from "react";
-const Color = (props) => {
-  return (
-    <div
-      onClick={() => props.setSelectedColor(props.color)}
-      className={props.color}
-    ></div>
-  );
+import React, { useState } from "react";
+
+const Color = ({ color, setSelectedColor }) => {
+  return <div className={color} onClick={() => setSelectedColor(color)}></div>;
 };
 
 const App = () => {
   const [selectedColor, setSelectedColor] = useState("");
+
   return (
     <div id="container">
       <div id="navbar">
